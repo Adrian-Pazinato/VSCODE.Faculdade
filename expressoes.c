@@ -22,5 +22,7 @@ int main() {
     y = x++;
     printf("y + x = %d\n", x + y);
     
+    getchar();
+
     return 0;
 }
