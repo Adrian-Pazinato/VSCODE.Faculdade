@@ -1,2 +1,2 @@
 # VSCODE.Faculdade
-Voltei? Por tempo limitado!
+Voltei? Sim, mas por tempo limitado!
