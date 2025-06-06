@@ -8,12 +8,19 @@ int main() {
     y = 10;
     
     printf("y + x = %d\n", y + x);
-    
+
     y = x++;
 
     printf("x = %d\n", x);
     printf("y = %d\n", y);
-
     printf("y + x = %d\n", y + x);
+
+    x = 20;
+    y = ++x;
+    printf("x = %d\n", x);
+    printf("y = %d\n", y);
+    y = x++;
+    printf("y + x = %d\n", x + y);
+    
     return 0;
 }
