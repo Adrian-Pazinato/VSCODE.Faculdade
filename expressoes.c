@@ -1,12 +1,13 @@
 #include <stdio.h>
 
-int main() {
+int main()
+{
 
     int x, y;
 
     x = 15;
     y = 10;
-    
+
     printf("y + x = %d\n", y + x);
 
     y = x++;
@@ -21,7 +22,7 @@ int main() {
     printf("y = %d\n", y);
     y = x++;
     printf("y + x = %d\n", x + y);
-    
+
     getchar();
 
     return 0;

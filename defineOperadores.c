@@ -2,7 +2,8 @@
 
 #define numero 1323
 
-int main() {
+int main()
+{
     int x;
     x = numero;
 
