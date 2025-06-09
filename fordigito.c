@@ -2,20 +2,20 @@
 
 int main()
 {
-    int base, potencia;
+    int potencia, expoente;
     long int result = 1;
 
-    printf("digite um numero: ");
-    scanf("%d", &base);
-    printf("digite outro numero: ");
+    printf("digite a potencia: ");
     scanf("%d", &potencia);
+    printf("digite o expoente: ");
+    scanf("%d", &expoente);
 
-    for (int xreca = 0; xreca < potencia; xreca++)
+    for (int xreca = 0; xreca < expoente; xreca++)
     {
-        result = result * base;
+        result = result * potencia;
     }
 
-    printf("elevado de %d e %d eh: %ld\n", base, potencia, result);
+    printf("elevado de %d e %d eh: %ld\n", potencia, expoente, result);
     getchar(); // To consume the newline character left by scanf
     printf("meta o pe no acelerador\n");
     getchar();
