@@ -1,28 +1,27 @@
 #include <stdio.h>
+#include <stdio.h>
 
 int main()
 {
-    int CDI, MercadoPago, ValorConta, Lucro, ResultMes, ResultAno;
+    float CDI, ValorConta, MercadoPago, Lucro, ResultMes, ResultAno;
+
     printf("Digite o valor do CDI: ");
-    scanf("%d", &CDI);
+    scanf("%f", &CDI);
+
     printf("Digite o valor da conta: ");
-    scanf("%d", &ValorConta);
+    scanf("%f", &ValorConta);
 
-    MercadoPago = (int)(CDI * 1.2);
-    printf("Valor Mercado Pago: %d\n", MercadoPago);
-    printf("Valor do CDI: %d\n", CDI);
+    MercadoPago = CDI * 1.2f;
+    Lucro = ValorConta * MercadoPago;
+    ResultMes = Lucro / 12.0f;
+    ResultAno = Lucro * 1.0f;
 
-    Lucro = MercadoPago - CDI;
+    printf("Valor Mercado Pago: %.4f\n", MercadoPago);
+    printf("Valor do CDI: %.4f\n", CDI);
+    printf("Valor da conta: %.2f\n", ValorConta);
+    printf("Lucro : %.2f\n", Lucro);
+    printf("Valor mensal: %.2f\n", ResultMes);
+    printf("Valor anual: %.2f\n", ResultAno);
 
-    ResultMes = MercadoPago / 12;
-    ResultAno = MercadoPago * 1;
-
-    printf("Lucro : %d\n", Lucro);
-    printf("Valor Mercado Pago: %d\n", MercadoPago);
-    printf("Valor da conta: %d\n", ValorConta);
-    printf("Valor mensal: %d\n", ResultMes);
-    printf("Valor anual: %d\n", ResultAno);
-
-    getchar();
     return 0;
 }
