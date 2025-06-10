@@ -1,9 +1,22 @@
 #include <stdio.h>
+#include <windows.h>
 
 int main()
 {
+
+    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+    CONSOLE_SCREEN_BUFFER_INFO consoleInfo;
+    WORD saved_attributes;
+
+    GetConsoleScreenBufferInfo(hConsole, &consoleInfo);
+    saved_attributes = consoleInfo.wAttributes;
+
+    SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY);
+
     float CDI, ValorConta, MercadoPago, Lucro, ResultMes, ResultAno, ResultMesTaxa, ResultAnoTaxa, Taxa, ResultAnoSemMP, ResultMesSemMP;
     printf("Bem vindo ao calculador de CDI do Mercado Pago by Didica do Baile\n");
+
+    SetConsoleTextAttribute(hConsole, FOREGROUND_BLUE | FOREGROUND_INTENSITY);
 
     printf("Digite o valor do CDI: ");
     scanf("%f", &CDI);
@@ -36,6 +49,8 @@ int main()
     printf("Valor anual bruto: %.2f\n", ResultAno);
     printf("Valor mensal liquido: %.2f\n", ResultMesTaxa);
     printf("Valor anual liquido: %.2f\n", ResultAnoTaxa);
+
+    SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY);
 
     getchar();
     printf("Calculador de CDI do Mercado Pago by Didica do Baile\n");
