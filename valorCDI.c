@@ -6,10 +6,8 @@ int main()
 
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     CONSOLE_SCREEN_BUFFER_INFO consoleInfo;
-    WORD saved_attributes;
 
     GetConsoleScreenBufferInfo(hConsole, &consoleInfo);
-    saved_attributes = consoleInfo.wAttributes;
 
     SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY);
 
@@ -43,10 +41,12 @@ int main()
     ResultAnoTaxa = ResultAnoTaxa - ResultAno;
     ResultMesTaxa = ResultMesTaxa - ResultMes;
 
+    SetConsoleTextAttribute(hConsole, FOREGROUND_RED);
     printf("Valor mensal bruto sem Mercado Pago: %.2f\n", ResultMesSemMP);
     printf("Valor anual bruto sem Mercado Pago: %.2f\n", ResultAnoSemMP);
     printf("Valor mensal bruto: %.2f\n", ResultMes);
     printf("Valor anual bruto: %.2f\n", ResultAno);
+    SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY);
     printf("Valor mensal liquido: %.2f\n", ResultMesTaxa);
     printf("Valor anual liquido: %.2f\n", ResultAnoTaxa);
 
