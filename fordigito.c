@@ -16,7 +16,7 @@ int main()
     }
 
     printf("elevado de %d e %d eh: %ld\n", potencia, expoente, result);
-    getchar(); // To consume the newline character left by scanf
+    getchar();
     printf("meta o pe no acelerador\n");
     getchar();
 
